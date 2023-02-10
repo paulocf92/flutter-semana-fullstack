@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listinha/src/shared/widgets/user_image_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,14 +14,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('LISTINHA'),
-        actions: [
-          GestureDetector(
-            child: CircleAvatar(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-              child: const Text('A'),
-            ),
-          )
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 8),
+            child: UserImageButton(),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
