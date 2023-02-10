@@ -12,6 +12,36 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavigationDrawer(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 28, 16, 16),
+            child: Text(
+              'Opções',
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+          ),
+          NavigationDrawerDestination(
+            icon: const Icon(Icons.sync),
+            label: Row(
+              children: [
+                const Text('Sincronizar'),
+                const SizedBox(
+                  width: 25,
+                ),
+                Text(
+                  '12/12/2012 às 12:12',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
+            ),
+          ),
+          const NavigationDrawerDestination(
+            icon: Icon(Icons.settings),
+            label: Text('Configurações'),
+          ),
+        ],
+      ),
       appBar: AppBar(
         title: const Text('LISTINHA'),
         actions: const [
