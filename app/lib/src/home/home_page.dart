@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
         icon: const Icon(Icons.edit),
         label: const Text('Nova Lista'),
         onPressed: () {
-          Navigator.of(context).pushNamed('/edit');
+          Navigator.of(context).pushNamed('/home/edit');
         },
       ),
     );
