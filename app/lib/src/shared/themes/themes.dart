@@ -13,6 +13,13 @@ ThemeData get lightTheme => ThemeData(
         backgroundColor: _lightColorScheme.primary,
         foregroundColor: _lightColorScheme.onPrimary,
       ),
+      segmentedButtonTheme: SegmentedButtonThemeData(
+        style: ButtonStyle(
+          textStyle: MaterialStateProperty.resolveWith<TextStyle>((states) {
+            return TextStyle(fontSize: 9);
+          }),
+        ),
+      ),
     );
 
 ThemeData get darkTheme => ThemeData(
