@@ -7,10 +7,11 @@ ThemeData get lightTheme => ThemeData(
       appBarTheme: AppBarTheme(
         centerTitle: true,
         backgroundColor: _lightColorScheme.primaryContainer,
+        foregroundColor: _lightColorScheme.onPrimaryContainer,
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: _lightColorScheme.primary,
-        foregroundColor: Colors.white,
+        foregroundColor: _lightColorScheme.onPrimary,
       ),
     );
 
@@ -20,5 +21,10 @@ ThemeData get darkTheme => ThemeData(
       appBarTheme: AppBarTheme(
         centerTitle: true,
         backgroundColor: _darkColorScheme.primaryContainer,
+        foregroundColor: _darkColorScheme.onPrimaryContainer,
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: _darkColorScheme.primary,
+        foregroundColor: _darkColorScheme.onPrimary,
       ),
     );

@@ -12,7 +12,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('LISTINHA'),
+        title: const Text('LISTINHA'),
+        actions: [
+          GestureDetector(
+            child: CircleAvatar(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Theme.of(context).colorScheme.onPrimary,
+              child: const Text('A'),
+            ),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.edit),
+        label: const Text('Nova Lista'),
+        onPressed: () {},
       ),
     );
   }
