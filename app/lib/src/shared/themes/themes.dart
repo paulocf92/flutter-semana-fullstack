@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'color_schemes.g.dart';
+part 'color_schemes.g.dart';
 
 final lightTheme = ThemeData(
   useMaterial3: true,
-  colorScheme: lightColorScheme,
+  colorScheme: _lightColorScheme,
   appBarTheme: AppBarTheme(
     centerTitle: true,
-    backgroundColor: lightColorScheme.primaryContainer,
+    backgroundColor: _lightColorScheme.primaryContainer,
   ),
   floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: lightColorScheme.primary,
+    backgroundColor: _lightColorScheme.primary,
     foregroundColor: Colors.white,
   ),
 );
 
 final darkTheme = ThemeData(
   useMaterial3: true,
-  colorScheme: darkColorScheme,
+  colorScheme: _darkColorScheme,
   appBarTheme: AppBarTheme(
     centerTitle: true,
-    backgroundColor: darkColorScheme.primaryContainer,
+    backgroundColor: _darkColorScheme.primaryContainer,
   ),
 );
