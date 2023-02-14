@@ -9,7 +9,16 @@ class AppStore {
     }
   }
 
+  final syncDate = ValueNotifier<DateTime?>(null);
+
+  void setSyncDate(DateTime date) {
+    syncDate.value = date;
+    save();
+  }
+
   void save() {
     // TODO: Salvar os dados na base local
   }
+
+  void init() {}
 }
