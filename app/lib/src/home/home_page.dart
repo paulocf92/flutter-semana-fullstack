@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:listinha/src/home/widgets/custom_drawer.dart';
 import 'package:listinha/src/home/widgets/task_card.dart';
+import 'package:listinha/src/shared/services/realm/models/task_model.dart';
 import 'package:listinha/src/shared/widgets/user_image_button.dart';
+import 'package:realm/realm.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -36,7 +38,20 @@ class _HomePageState extends State<HomePage> {
               ),
               itemCount: 100,
               itemBuilder: (_, index) {
-                return const TaskCard();
+                final board = TaskBoard(
+                  Uuid.v4(),
+                  'Nova lista de tarefas 1',
+                  tasks: [
+                    Task(Uuid.v4(), '', completed: true),
+                    Task(Uuid.v4(), '', completed: true),
+                    Task(Uuid.v4(), '', completed: true),
+                    Task(Uuid.v4(), '', completed: true),
+                  ],
+                );
+                return TaskCard(
+                  board: board,
+                  height: 140,
+                );
               },
               separatorBuilder: (context, index) {
                 return const SizedBox(
