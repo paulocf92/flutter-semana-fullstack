@@ -7,7 +7,23 @@ class TaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 120,
-      color: Colors.red,
+      decoration: BoxDecoration(
+        color: Colors.red,
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.access_alarm),
+              Text('dadsdsd'),
+            ],
+          ),
+          Text('Título'),
+          LinearProgressIndicator(),
+          Text('1/5'),
+        ],
+      ),
     );
   }
 }
