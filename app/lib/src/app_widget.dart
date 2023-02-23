@@ -25,7 +25,7 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     Modular.setInitialRoute('/home/');
-    final themeMode = context.select(() => appStore.themeMode.value);
+    final themeMode = context.select(() => appStore.themeMode);
 
     return MaterialApp.router(
       title: 'Flutter Demo',

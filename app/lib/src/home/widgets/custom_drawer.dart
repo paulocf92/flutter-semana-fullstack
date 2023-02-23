@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final appStore = context.read<AppStore>();
 
-    final syncDate = context.select(() => appStore.syncDate.value);
+    final syncDate = context.select(() => appStore.syncDate);
 
     var syncDateText = 'Nunca';
 

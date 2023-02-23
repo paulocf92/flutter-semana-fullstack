@@ -15,13 +15,13 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
 
   void _changeThemeMode(ThemeMode? mode) {
     if (mode != null) {
-      appStore.themeMode.value = mode;
+      appStore.themeMode = mode;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    context.select(() => appStore.themeMode.value);
+    context.select(() => appStore.themeMode);
 
     return Scaffold(
       appBar: AppBar(
@@ -48,19 +48,19 @@ class _ConfigurationPageState extends State<ConfigurationPage> {
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.system,
-              groupValue: appStore.themeMode.value,
+              groupValue: appStore.themeMode,
               title: const Text('Sistema'),
               onChanged: _changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.light,
-              groupValue: appStore.themeMode.value,
+              groupValue: appStore.themeMode,
               title: const Text('Claro'),
               onChanged: _changeThemeMode,
             ),
             RadioListTile<ThemeMode>(
               value: ThemeMode.dark,
-              groupValue: appStore.themeMode.value,
+              groupValue: appStore.themeMode,
               title: const Text('Escuro'),
               onChanged: _changeThemeMode,
             ),
